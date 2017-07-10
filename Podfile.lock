@@ -1,0 +1,52 @@
+PODS:
+  - ALLoadingView (1.1.2)
+  - BTNavigationDropdownMenu (0.4.1)
+  - ByvImagePicker (0.1.2):
+    - ByvUtils
+    - TOCropViewController
+  - ByvUtils (1.0.4)
+  - CPAlertViewController (3.0.0)
+  - paper-onboarding (2.0.1)
+  - SCLAlertView (0.7.0)
+  - SwiftyGif (3.0.0)
+  - SwiftyUserDefaults (3.0.0)
+  - TesseractOCRiOS (4.0.0)
+  - TOCropViewController (2.0.11)
+
+DEPENDENCIES:
+  - ALLoadingView
+  - BTNavigationDropdownMenu (from `https://github.com/PhamBaTho/BTNavigationDropdownMenu.git`, branch `swift-3.0`)
+  - ByvImagePicker
+  - CPAlertViewController
+  - paper-onboarding (~> 2.0.1)
+  - SCLAlertView
+  - SwiftyGif
+  - SwiftyUserDefaults
+  - TesseractOCRiOS (= 4.0.0)
+
+EXTERNAL SOURCES:
+  BTNavigationDropdownMenu:
+    :branch: swift-3.0
+    :git: https://github.com/PhamBaTho/BTNavigationDropdownMenu.git
+
+CHECKOUT OPTIONS:
+  BTNavigationDropdownMenu:
+    :commit: 2c08c8579cf7a53ecb3dbf578e6e1034080a9859
+    :git: https://github.com/PhamBaTho/BTNavigationDropdownMenu.git
+
+SPEC CHECKSUMS:
+  ALLoadingView: 4244d5b7be5f86331b9a730fd906b2eedcb8daa2
+  BTNavigationDropdownMenu: 093f3cbfad1572f2c222bdf8d17584d1e13380d4
+  ByvImagePicker: 8516089b0fab3da8f120c20aec3ac7c6dbc36380
+  ByvUtils: 5755cbf33d70ac857f122c46ef8245086ec0c5b1
+  CPAlertViewController: dfbc2d8eeb8fb2650ab3ac1159f1d8fc3861a10d
+  paper-onboarding: a8e001214d9ce9decf78e160b3823f396dbd51ac
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  SwiftyGif: d6b4d63de2a2a5134d8b54ba5719837319d77ef0
+  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
+  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
+  TOCropViewController: fe91aaab9e95d72ac38654d1174c8c8339585ee5
+
+PODFILE CHECKSUM: 79c253ebcfd788198a703562f3798839d992065b
+
+COCOAPODS: 1.2.0

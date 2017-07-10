@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Crop Delegate-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="showCropvc" id="BYZ-38-t0r" customClass="CropViewController" customModule="project1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kvb-6K-ReN" customClass="CroppableImageView" customModule="project1" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="599"/>
+                                <connections>
+                                    <outlet property="cropDelegate" destination="BYZ-38-t0r" id="rN3-7W-ahK"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8l-HC-wUH">
+                                <rect key="frame" x="95" y="647" width="224" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Select image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleSelectImgButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lXX-dd-jGc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYN-zp-Orb">
+                                <rect key="frame" x="95" y="685" width="224" height="31"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="f8l-HB-5ZW"/>
+                                </constraints>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCropButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YvP-e4-VHB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WYN-zp-Orb" firstAttribute="top" secondItem="v8l-HC-wUH" secondAttribute="bottom" constant="8" symbolic="YES" id="1aQ-i6-hva"/>
+                            <constraint firstItem="v8l-HC-wUH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dcl-Mr-SJG"/>
+                            <constraint firstAttribute="bottom" secondItem="Kvb-6K-ReN" secondAttribute="bottom" id="Dwk-wN-Aod"/>
+                            <constraint firstItem="Kvb-6K-ReN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Gfy-Vh-gjX"/>
+                            <constraint firstItem="WYN-zp-Orb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HT3-oS-HZU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kvb-6K-ReN" secondAttribute="bottom" constant="109" id="Ld3-el-HCA"/>
+                            <constraint firstAttribute="bottom" secondItem="WYN-zp-Orb" secondAttribute="bottom" constant="20" symbolic="YES" id="Vsd-D2-n3i"/>
+                            <constraint firstItem="Kvb-6K-ReN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X3c-qh-gXr"/>
+                            <constraint firstItem="WYN-zp-Orb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="hPl-6V-tgx"/>
+                            <constraint firstItem="WYN-zp-Orb" firstAttribute="leading" secondItem="v8l-HC-wUH" secondAttribute="leading" id="hsv-aS-dJ5"/>
+                            <constraint firstAttribute="trailing" secondItem="Kvb-6K-ReN" secondAttribute="trailing" id="nyw-Dr-btY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Dwk-wN-Aod"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cropButton" destination="WYN-zp-Orb" id="kSh-6N-vn3"/>
+                        <outlet property="cropView" destination="Kvb-6K-ReN" id="PWP-QI-nbn"/>
+                        <outlet property="selectImage" destination="v8l-HC-wUH" id="gQL-O3-aFz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="67.016491754122939"/>
+        </scene>
+    </scenes>
+</document>
